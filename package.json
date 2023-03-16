@@ -1,0 +1,22 @@
+{
+  "name": "web-snap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "puppeteer": "^19.7.5"
+  },
+  "engines": {
+    "node": "18.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
