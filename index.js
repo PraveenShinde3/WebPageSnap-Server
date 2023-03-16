@@ -47,7 +47,7 @@ app.post("/screenshot", async (req, res) => {
 
   // Capture screenshot
   await page.screenshot({
-    path: "./public/screenshot/" + (await page.title()) + ".jpg",
+    path: (await page.title()) + ".jpg",
   });
 
   // Close the browser instance
