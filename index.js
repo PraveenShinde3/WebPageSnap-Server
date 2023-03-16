@@ -16,8 +16,7 @@ const port = process.env.PORT || 5000;
 app.use("/static", express.static(path.join(__dirname, "public")));
 app.use(
   cors({
-    origin: "https://webpagesnap.pages.dev",
-    methods: ["GET", "POST"],
+    origin: "*",
   })
 );
 app.use(express.json());
