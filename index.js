@@ -19,7 +19,7 @@ app.use(
     origin: "*",
   })
 );
-app.use((req, res, next) => {
+app.use("/screenshot", (req, res, next) => {
   res.set({
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "*",
