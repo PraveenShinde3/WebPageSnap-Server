@@ -19,6 +19,16 @@ app.use(
     origin: "*",
   })
 );
+app.use((req, res, next) => {
+  res.set({
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "*",
+    "Access-Control-Allow-Headers":
+      "'Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token'",
+  });
+
+  next();
+});
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -28,7 +38,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/screenshot", (req, res) => {
-  console.log(req.body.url);
+  // console.log(req.body.url);
   takeScreenshot(req.body.url)
     .then((screenshot) => uploadScreenshot(screenshot))
     .then((result) => {
